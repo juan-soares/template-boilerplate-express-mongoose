@@ -1,9 +1,12 @@
 const express = require("express");
-const app = express();
-require('../config/mongo');
+require("../config/mongo");
+const bodyParser = require("body-parser");
 const routesPessoas = require("./routes/pessoas");
 
+const app = express();
+
 app.use(express.static("public"));
+app.use(bodyParser.json());
 
 app.use("/pessoas", routesPessoas);
 
