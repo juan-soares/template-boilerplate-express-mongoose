@@ -5,4 +5,4 @@ const pessoaSchema = new mongoose.Schema({
   idade: { type: Number, required: true },
 });
 
-module.exports = mongoose.model("Pessoa", pessoaSchema, "collection-pessoas");
+module.exports = mongoose.model("Pessoa", pessoaSchema, "collectionPessoas");
